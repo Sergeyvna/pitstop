@@ -1,38 +1,139 @@
-.App {
-  text-align: center;
+/* Main CSS 8*/
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+:root {
+    --primary: #0062C5;
+    --heading-color: #282938;
+    --brown: #A6937D;
+    --bg-shade: #f7fdff;
+    --blue: #02A3BE;
+    --darkblue: #0C2249;
+    --black: #040509;
+    --white: #ffffff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.App-link {
-  color: #61dafb;
+.btn {
+    font-family: "Roboto", sans-serif;
+    display: inline-block;
+    padding: 15px 50px;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 24px;
+    cursor: pointer;
+    border-radius: 5px;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.call-txt {
+    margin: 0 10px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 800;
+}
+
+.btn-primary {
+    color: var(--white);
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+.btn-primary:hover {
+    color: var(--primary);
+    background-color: var(--white);
+}
+
+
+
+/* Headings and Text */
+h1 {
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 65px;
+}
+
+h2 {
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 55px;
+}
+
+h3 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 35px;
+}
+
+.text-large {
+    color: var(--darkblue);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+}
+
+.text-medium {
+    color: var(--darkblue);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.text-small {
+    color: var(--black);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+/* Section titles */
+.section-title {
+    color: var(--heading-color);
+    font-size: 21px;
+    text-align: center;
+    font-weight: 600;
+    line-height: 32px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.sub-title {
+    color: car(--heading-color);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.main-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 132px 132px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    background-color: var(--bg-shade);
+}
+
+.main-content-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    gap: 32px;
 }
