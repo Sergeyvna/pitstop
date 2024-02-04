@@ -7,7 +7,7 @@ export default function MainSection() {
             <div className="main-content-box">
                 <div className="main-contet">
                     <h1 className="main-section-title">Welcome to <br></br>Pit Stop Autos</h1>
-                    <p className="main-section-desc">We are a family-owned garage located in <span className="dark-blue-text">Bristol</span>, offering <span className="dark-blue-text">affordable</span> prices for our services. <br/> We pride ourselves on our commitment to provide a professional and speedy service at all times, whilst maintaining the highest quality of work.</p>
+                    <p className="main-section-desc">We are a family-owned garage located in <span className="dark-blue-text">Bristol</span>, offering <span className="dark-blue-text">affordable</span> prices for our services. <br/> We are dedicated to delivering prompt and professional service without compromising quality.</p>
                 </div>
                 <div className="btn-container">
                     <button className="btn btn-primary">Request a Quote</button>

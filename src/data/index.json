@@ -1,0 +1,36 @@
+{
+    "services": [
+        {
+            "id": "1",
+            "src":"../img/car-service-icon.png",
+            "title": "Car & Van Servicing"
+
+        },
+        {
+            "id": "2",
+            "src":"../img/wheel-icon.png",
+            "title": "Tyres"
+
+        },
+        {
+            "id": "3",
+            "src":"../img/car-inspection-icon.png",
+            "title": "Diagnostics"
+
+        },
+        
+        {
+            "id": "4",
+            "src":"../img/brake-icon.png",
+            "title": "Brakes"
+
+        },
+        {
+            "id": "5",
+            "src":"../img/car-report-icon.png",
+            "title": "And More..."
+
+        }
+
+    ]
+}
