@@ -11,7 +11,6 @@ export default function MainSection() {
                 </div>
                 <div className="btn-container">
                     <button className="btn btn-primary">Request a Quote</button>
-                    <p className="call-txt">or Call Us 07482014241</p>
                 </div>
             </div>
         </section>

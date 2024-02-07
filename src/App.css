@@ -2,14 +2,16 @@
 body {
     margin: 0;
     font-family: "Roboto", sans-serif;
+    /*background-color: #7aa1c92c;*/
 }
 
 :root {
+    /* colors #0062C5 #282938 #02A3BE #0C2249*/
     --primary: #0062C5;
-    --heading-color: #282938;
+    --heading-color: #041430;
     --brown: #A6937D;
-    --bg-shade: #f6fcff;
-    --blue: #02A3BE;
+    --bg-shade: #fafaff;
+    --blue: #0062C5;
     --darkblue: #0C2249;
     --black: #040509;
     --white: #ffffff;
@@ -179,4 +181,27 @@ p {
 
 .list-title {
     margin-top: 10px;
+}
+
+/* Contact form Style */
+
+.random-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 50px auto;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 132px;
+    gap: 32px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 132px;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 2px 16px rgba(0,0,0, 0.1);
+    background-color: #ffffff;
 }

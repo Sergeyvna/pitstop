@@ -70,7 +70,7 @@ function Navbar() {
                         activeClass="navbar-active" 
                         spy={true} smooth={true} offset={-70} duration={500} 
                         to="gallery" 
-                        className="navbar-content">Gallery</Link>
+                        className="navbar-content">Reviews</Link>
                     </li>
                 </ul>
             </div>
