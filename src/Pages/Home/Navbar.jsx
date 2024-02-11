@@ -35,7 +35,7 @@ function Navbar() {
     return (
         <nav className={`navbar ${navActive? "active" : ""}`}>
             <div>
-                <img src="./img/tag-1.png" alt="pitstopautoslogo" />
+                <img className="navbar-img" src="./img/logo.png" alt="pitstopautoslogo" />
             </div>
             <a className={`nav_ham ${navActive ? "active" : ""}`} onClick={toggleNav}>
                 <span className="nav_ham_line"></span>
@@ -63,14 +63,14 @@ function Navbar() {
                         activeClass="navbar-active" 
                         spy={true} smooth={true} offset={-70} duration={500} 
                         to="contact" 
-                        className="navbar-content">Contact Us</Link>
+                        className="navbar-content">Gallery</Link>
                     </li>
                     <li>
                         <Link onClick={closeMenu} 
                         activeClass="navbar-active" 
                         spy={true} smooth={true} offset={-70} duration={500} 
                         to="gallery" 
-                        className="navbar-content">Reviews</Link>
+                        className="navbar-content">Contact Us</Link>
                     </li>
                 </ul>
             </div>
