@@ -189,7 +189,41 @@ p {
     margin-top: 10px;
 }
 /* Gallery Style */
+.logos-section {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+.logos {
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 60px 0;
+    white-space: nowrap;
+}
+
+.logos:hover .logos-slide {
+    animation-play-state: paused;
+}
+
+.logos-slide {
+    display: inline-block;
+    animation: slide 45s infinite linear;
+}
+
+.logos-slide img {
+    height: 400px;
+    margin: 0px 40px;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
 
 /* Contact Form Style */
 .tab-container {
