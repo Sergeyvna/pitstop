@@ -2,6 +2,8 @@ import ContactForm from "../ContactForm";
 import MainSection from "../MainSection";
 import Services from "../Services";
 import Gallery from "../Gallery";
+import About from "../About";
+import Footer from "../Footer";
 
 export default function Home() {
     return(
@@ -10,6 +12,8 @@ export default function Home() {
             <Services/>
             <Gallery/>
             <ContactForm/>
+            <About/>
+            <Footer/>
         </>
     );
 }

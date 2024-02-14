@@ -3,7 +3,7 @@ import data from "../../data/index.json";
 export default function Services(){
     return(
         <section className="services-section" id="services">
-            <div className="services-container">
+            <div className="title-container">
                 <h2 className="title">Services</h2>
             </div>
 

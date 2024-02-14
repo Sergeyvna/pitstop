@@ -1,7 +1,9 @@
 export default function Gallery() {
     return (
         <section className="logos-section">
-             <h2 className="title">Gallery</h2>
+            <div className="title-container">
+            <h2 className="title">Gallery</h2>
+            </div>
             <div className='logos'>
                 <div className='logos-slide'>
                     <img src='./img/gallery-img-1.jpg' alt="gallery image 1"/>
