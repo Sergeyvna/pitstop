@@ -17,7 +17,7 @@ export default function Gallery() {
                 </div>
 
                 <div className='logos-slide'>
-                    <img src='./img/gallery-img-1.jpg' alt="gallery image 1"/>
+                    <img src='./img/gallery-img-1.png' alt="gallery image 1"/>
                     <img src='./img/gallery-img-2.jpg' alt="gallery image 2"/>
                     <img src='./img/gallery-img-3.jpg' alt="gallery image 3"/>
                     <img src='./img/gallery-img-4.jpg' alt="gallery image 4"/>

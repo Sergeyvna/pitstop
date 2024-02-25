@@ -25,10 +25,15 @@ export default function ContactForm() {
                     <div className="tab-content" style={{ display: activeTab === 0 ? 'block' : 'none' }}>
                         
                         <form  action="https://formsubmit.co/f0a7b6a729bd7f53ff95e224651bec94" method="POST" className="contact-form-container">
+                            
+                            <input type="text" name="_honey" style={{display: "none"}}/>
+                            <input type="hidden" name="_captcha" value="false"/>
+                            <input type="hidden" name="_next" value="http://localhost:3000/success"/>
+
                             <div className="contact-container">
                                 <label htmlFor='Full name' className='contact-label'>
                                     <span>Full Name</span>
-                                    <input type="text" className="contact-input" name="Full name" id="full-name" required />
+                                    <input type="text" className="contact-input" name="Full&nbsp;Name" id="full-name" required />
                                 </label>
 
                                 <label htmlFor='Email' className='contact-label'>
@@ -43,7 +48,7 @@ export default function ContactForm() {
 
                                 <label htmlFor='Car Registration' className='contact-label'>
                                     <span>Car Registration</span>
-                                    <input type="text" className="contact-input" name="Car Registration" id="car-model" required placeholder="OV21MTU"/>
+                                    <input type="text" className="contact-input" name="Car&nbsp;Registration" id="car-model" required placeholder="OV21MTU"/>
                                 </label>
 
                                 <label htmlFor='Message' className='contact-label'>
@@ -52,7 +57,7 @@ export default function ContactForm() {
                                 </label>
 
                                 <label className='checkbox-label'>
-                                    <input type="checkbox" required name="checkbox" id="checkbox"/>
+                                    <input type="checkbox" required id="checkbox"/>
                                     <span>I agree to terms & conditions provided by the company. By providing my details, I agree to receive email messages from the business.</span>
                                 </label>
 
@@ -66,11 +71,15 @@ export default function ContactForm() {
                     </div>
 
                     <div className="tab-content" style={{ display: activeTab === 1 ? 'block' : 'none' }}>
-                    <form className="contact-form-container">
+                    <form action="https://formsubmit.co/f0a7b6a729bd7f53ff95e224651bec94" method="POST" className="contact-form-container">
+                            <input type="text" name="_honey" style={{display: "none"}}/>
+                            <input type="hidden" name="_captcha" value="false"/>
+                            <input type="hidden" name="_next" value="http://localhost:3000/success"/>
+
                             <div className="contact-container">
                                 <label htmlFor='full-name' className='contact-label'>
                                     <span>Full Name</span>
-                                    <input type="text" className="contact-input" name="Full name" id="full-name" required />
+                                    <input type="text" className="contact-input" name="Full&nbsp;name" id="full-name" required />
                                 </label>
 
                                 <label htmlFor='email' className='contact-label'>
@@ -85,7 +94,7 @@ export default function ContactForm() {
 
                                 <label htmlFor='Tyre size' className='contact-label'>
                                     <span>Width / Profile / Rim / Speed</span>
-                                    <input type="text" className="contact-input" name="Tyre size" id="tyre-size" placeholder="195/50R15V" required />
+                                    <input type="text" className="contact-input" name="Tyre&nbsp;Size" id="tyre-size" placeholder="195/50R15V" required />
                                 </label>
 
                                 <label htmlFor="select-quantity" className='contact-label'>

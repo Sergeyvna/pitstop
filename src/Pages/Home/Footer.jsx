@@ -4,8 +4,8 @@ import React from "react";
 export default function Footer() {
   return (
     <footer>
-      <div className="footer--container">
-      <div className="footer--link--container">
+      <div className="footer-container">
+      <div className="footer-link-container">
         <div>
           <p>Pit Stop Autos Ltd. <br/>Unit1 Garage, Whitby Rd, <br/>Bristol BS4 4AR <br/><b>MON - FRI: 9AM - 5PM </b><br/>Phone: 07482 014241 <br/>Email: <a href="mailto:pitstopautosbristol@gmail.com" className="footer-links">pitstopautosbristol@gmail.com</a></p>
           <hr/>

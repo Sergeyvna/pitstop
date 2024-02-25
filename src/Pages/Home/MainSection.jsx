@@ -1,21 +1,42 @@
-export default function MainSection() {
-    return (
-        <section id="main-section" className="main-section">
-            
-        <div className="main-container">
-            <img className="main-img" src="./img/maingarageimage.jpg" alt="Image of the Garage"/>
-            <div className="main-content-box">
-                <div className="main-content">
-                    <h1 className="main-section-title">Welcome to <br/>Pit Stop Autos</h1>
-                    <p className="main-section-desc">We are a family-owned garage located in Bristol, offering affordable prices for our services. <br/> We are dedicated to delivering prompt and professional service without compromising quality.</p>
+import React, { useState, useEffect } from 'react';
 
-                </div>
-                <div class="btn-container">
-                    <button class="btn btn-primary">Request a Quote</button>
-                </div>
-            </div>
-            
+export default function MainSection() {
+  const [navigateToContact, setNavigateToContact] = useState(false);
+
+  useEffect(() => {
+    if (navigateToContact) {
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        const navbarHeight = document.querySelector('.navbar').offsetHeight;
+        window.scrollTo({
+          top: contactSection.offsetTop - navbarHeight,
+          behavior: 'smooth'
+        });
+        setNavigateToContact(false);
+      }
+    }
+  }, [navigateToContact]);
+
+  const handleRequestQuote = () => {
+    // Set navigateToContact state to true when the button is clicked
+    setNavigateToContact(true);
+  };
+
+  return (
+    <section id="main-section" className="main-section" style={{ paddingTop: '50px' }}>
+      <div className="main-container">
+        <img className="main-img" src="./img/maingarageimage.jpg" alt="Image of the Garage" />
+        <div className="overlay"></div>
+        <div className="main-content-box">
+          <div className="main-content">
+            <h1 className="main-section-title">Welcome to <br />Pit Stop Autos</h1>
+            <p className="main-section-desc">We are a family-owned garage located in Bristol, offering affordable prices for our services. <br /> We are dedicated to delivering prompt and professional service without compromising quality.</p>
+          </div>
+          <div className="btn-container">
+            <button className="btn btn-primary" onClick={handleRequestQuote}>Request a Quote</button>
+          </div>
         </div>
+      </div>
     </section>
-    );
+  );
 }

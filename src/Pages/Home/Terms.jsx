@@ -1,7 +1,7 @@
 export default function TermsAndCond() {
     return (
         <section>
-            <div className="about-container">
+            <div className="about-container" style={{ paddingTop: '50px' }}>
                 <div className="title-container">
                     <h2 className="title">Terms and Conditions</h2>
                 </div>
