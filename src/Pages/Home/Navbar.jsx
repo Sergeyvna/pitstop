@@ -1,77 +1,80 @@
-import { useState, useEffect } from "react"
-import { Link } from "react-scroll"
+import { Link as RouterLink, useLocation } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 
 function Navbar() {
-    const {navActive, setNavActive} = useState(false);
-
-    const toggleNav = () => {
-        setNavActive(!navActive);
-    }
+    const location = useLocation();
 
     const closeMenu = () => {
-        setNavActive(false);
+        // Optional: Add logic to handle closing menu if needed
     }
 
-    useEffect(() => {
-        const handleResize = () => {
-            if(window.innerWidth <= 500) {
-                closeMenu;
-            }
-        }
-
-        window.addEventListener("resize", handleResize);
-
-        return () => {
-            window.removeEventListener("resize", handleResize);
-        }
-    }, []);
-
-    useEffect( () => {
-        if(window.innerWidth <= 1200){
-            closeMenu;
-        }
-    }, []);
-
     return (
-        <nav className={`navbar ${navActive? "active" : ""}`}>
+        <nav className="navbar">
             <div>
                 <img className="navbar-img" src="./img/logo.png" alt="pitstopautoslogo" />
             </div>
-            <a className={`nav_ham ${navActive ? "active" : ""}`} onClick={toggleNav}>
-                <span className="nav_ham_line"></span>
-                <span className="nav_ham_line"></span>
-                <span className="nav_ham_line"></span>
-            </a>
-            <div className={`navbar_items ${navActive ? "active" : ""}`}>
+            <div className="navbar_items">
                 <ul>
                     <li>
-                        <Link onClick={closeMenu} 
-                        activeClass="navbar-active" 
-                        spy={true} smooth={true} offset={-70} duration={500} 
-                        to="main_section" 
-                        className="navbar-content">Home</Link>
+                        {location.pathname === '/' ? (
+                            <ScrollLink
+                                activeClass="navbar-active"
+                                to="main-section"
+                                className="navbar-content"
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500}
+                                onClick={closeMenu}
+                                style={{textDecoration: 'none' }}>
+                                Home
+                            </ScrollLink>
+                        ) : (
+                            <RouterLink to="/" className="navbar-content" onClick={closeMenu}>
+                                Home
+                            </RouterLink>
+                        )}
                     </li>
                     <li>
-                        <Link onClick={closeMenu} 
-                        activeClass="navbar-active" 
-                        spy={true} smooth={true} offset={-70} duration={500} 
-                        to="services" 
-                        className="navbar-content">Services</Link>
+                        <ScrollLink
+                            activeClass="navbar-active"
+                            to="gallery"
+                            className="navbar-content"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={500}
+                            onClick={closeMenu}>
+                            Gallery
+                        </ScrollLink>
                     </li>
                     <li>
-                        <Link onClick={closeMenu} 
-                        activeClass="navbar-active" 
-                        spy={true} smooth={true} offset={-70} duration={500} 
-                        to="contact" 
-                        className="navbar-content">Gallery</Link>
+                        <ScrollLink
+                            activeClass="navbar-active"
+                            to="contact"
+                            className="navbar-content"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={500}
+                            onClick={closeMenu}>
+                            Get a Quote
+                        </ScrollLink>
                     </li>
                     <li>
-                        <Link onClick={closeMenu} 
-                        activeClass="navbar-active" 
-                        spy={true} smooth={true} offset={-70} duration={500} 
-                        to="gallery" 
-                        className="navbar-content">Contact Us</Link>
+                        <ScrollLink
+                            activeClass="navbar-active"
+                            to="about"
+                            className="navbar-content"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={500}
+                            onClick={closeMenu}>
+                            About us
+                        </ScrollLink>
                     </li>
+                    
                 </ul>
             </div>
         </nav>

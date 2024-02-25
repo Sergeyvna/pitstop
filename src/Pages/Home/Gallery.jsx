@@ -1,6 +1,6 @@
 export default function Gallery() {
     return (
-        <section className="logos-section">
+        <section className="logos-section" id="gallery">
             <div className="title-container">
             <h2 className="title">Gallery</h2>
             </div>

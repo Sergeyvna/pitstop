@@ -8,7 +8,7 @@ export default function ContactForm() {
     };
     
     return (
-        <section>
+        <section id='contact'>
            <div className='parent'>
             <div className="title-container">
                 <h2 className="title">Get a Personalized Quote</h2>
@@ -24,34 +24,34 @@ export default function ContactForm() {
                 <div className="tab-content-box">
                     <div className="tab-content" style={{ display: activeTab === 0 ? 'block' : 'none' }}>
                         
-                        <form className="contact-form-container">
+                        <form  action="https://formsubmit.co/f0a7b6a729bd7f53ff95e224651bec94" method="POST" className="contact-form-container">
                             <div className="contact-container">
-                                <label htmlFor='full-name' className='contact-label'>
+                                <label htmlFor='Full name' className='contact-label'>
                                     <span>Full Name</span>
-                                    <input type="text" className="contact-input" name="full-name" id="full-name" required />
+                                    <input type="text" className="contact-input" name="Full name" id="full-name" required />
                                 </label>
 
-                                <label htmlFor='email' className='contact-label'>
+                                <label htmlFor='Email' className='contact-label'>
                                     <span>Email</span>
-                                    <input type="email" className="contact-input" name="email" id="email" required />
+                                    <input type="email" className="contact-input" name="Email" id="email" required  placeholder="jsmith@gmail.com"/>
                                  </label>
 
-                                <label htmlFor='phone' className='contact-label'>
+                                <label htmlFor='Phone' className='contact-label'>
                                     <span>Phone</span>
-                                    <input type="text" className="contact-input" name="phone" id="phone" required />
+                                    <input type="text" className="contact-input" name="Phone" id="phone" required />
                                 </label>
 
-                                <label htmlFor='car-model' className='contact-label'>
-                                    <span>Car Make, Model & Year</span>
-                                    <input type="text" className="contact-input" name="car-model" id="car-model" required />
+                                <label htmlFor='Car Registration' className='contact-label'>
+                                    <span>Car Registration</span>
+                                    <input type="text" className="contact-input" name="Car Registration" id="car-model" required placeholder="OV21MTU"/>
                                 </label>
 
-                                <label htmlFor='message' className='contact-label'>
+                                <label htmlFor='Message' className='contact-label'>
                                     <span>Message</span>
-                                    <textarea className="contact-input" id="message" rows="3" placeholder="Service Request"/>
+                                    <textarea className="contact-input" id="message" name="Message" rows="3" placeholder="Service Request" maxLength={250}/>
                                 </label>
 
-                                <label htmlFor='checkbox' className='checkbox-label'>
+                                <label className='checkbox-label'>
                                     <input type="checkbox" required name="checkbox" id="checkbox"/>
                                     <span>I agree to terms & conditions provided by the company. By providing my details, I agree to receive email messages from the business.</span>
                                 </label>
@@ -70,27 +70,27 @@ export default function ContactForm() {
                             <div className="contact-container">
                                 <label htmlFor='full-name' className='contact-label'>
                                     <span>Full Name</span>
-                                    <input type="text" className="contact-input" name="full-name" id="full-name" required />
+                                    <input type="text" className="contact-input" name="Full name" id="full-name" required />
                                 </label>
 
                                 <label htmlFor='email' className='contact-label'>
                                     <span>Email</span>
-                                    <input type="email" className="contact-input" name="email" id="email" required />
+                                    <input type="email" className="contact-input" name="Email" id="email" required placeholder="jsmith@gmail.com"/>
                                  </label>
 
                                 <label htmlFor='phone' className='contact-label'>
                                     <span>Phone</span>
-                                    <input type="text" className="contact-input" name="phone" id="phone" required />
+                                    <input type="text" className="contact-input" name="Phone" id="phone" required />
                                 </label>
 
-                                <label htmlFor='car-model' className='contact-label'>
-                                    <span>Width /  Profile / Rim / Speed</span>
-                                    <input type="text" className="contact-input" name="car-model" id="car-model" placeholder="195/50R15V" required />
+                                <label htmlFor='Tyre size' className='contact-label'>
+                                    <span>Width / Profile / Rim / Speed</span>
+                                    <input type="text" className="contact-input" name="Tyre size" id="tyre-size" placeholder="195/50R15V" required />
                                 </label>
 
                                 <label htmlFor="select-quantity" className='contact-label'>
                                     <span>Select Quantity</span>
-                                    <select id="select-quantaty" className="contact-input">
+                                    <select id="select-quantaty" name="quantity"  className="contact-input">
                                         <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
@@ -101,12 +101,12 @@ export default function ContactForm() {
 
                                 <label htmlFor='message' className='contact-label'>
                                     <span>Message</span>
-                                    <textarea className="contact-input" id="message" rows="3" placeholder="Service Request"/>
+                                    <textarea className="contact-input" id="message" name="Message" rows="3" placeholder="Service Request" maxLength={250}/>
                                 </label>
 
 
                                 <label htmlFor='checkbox' className='checkbox-label'>
-                                    <input type="checkbox" required name="checkbox" id="checkbox"/>
+                                    <input type="checkbox" required id="checkbox"/>
                                     <span>I agree to terms & conditions provided by the company. By providing my details, I agree to receive email messages from the business.</span>
                                 </label>
 
@@ -119,7 +119,8 @@ export default function ContactForm() {
                     </div>
                 </div>
             </div>
-            </div> 
+            
+        </div> 
             
         </section>
     );

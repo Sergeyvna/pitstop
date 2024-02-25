@@ -1,7 +1,7 @@
 export default function About() {
     return (
         <section>
-            <div className="about-container">
+            <div className="about-container" id="about">
                 <div className="title-container">
                     <h2 className="title">How to Find Us</h2>
                 </div>
