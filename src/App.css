@@ -144,7 +144,7 @@ p {
     text-align: center;
     z-index: 1;
     color: white; /* Adjust text color for better visibility */
-    animation: fadeIn 1s ease forwards;
+    animation: fadeIn 2.6s ease forwards;
   }
   
 @keyframes fadeIn {
