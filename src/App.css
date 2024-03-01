@@ -48,7 +48,7 @@ body {
     border-bottom: 5px solid var(--primary);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
     .btn {
         font-size: 20px;
         padding: 15px 40px;
@@ -106,7 +106,7 @@ p {
     height: auto;
 }
 
-@media only screen and (max-width: 600px) {
+@media (min-width: 768px) {
     .navbar-img {
         width: 100px; /* Set a fixed width for larger screens */
     }
@@ -457,7 +457,7 @@ iframe {
     align-items: center;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
     .main-section{
         margin-bottom: 100px;
     }
