@@ -94,9 +94,9 @@ p {
 .navbar-content {
     color: var(--black);
     cursor: pointer;
-    white-space: nowrap; /* Prevent text from wrapping */
-    overflow: hidden; /* Hide any overflowing text */
-    text-overflow: ellipsis; /* Show ellipsis (...) for overflowed text */
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
     max-width: 150px;
     text-decoration: none;
 }
@@ -108,7 +108,7 @@ p {
 
 @media (min-width: 768px) {
     .navbar-img {
-        width: 100px; /* Set a fixed width for larger screens */
+        width: 100px; 
     }
 }
 
@@ -133,7 +133,7 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.70); /* Dark background color */
+    background-color: rgba(0, 0, 0, 0.70); 
   }
   
   .main-content-box {
@@ -143,7 +143,7 @@ p {
     transform: translate(-50%, -50%);
     text-align: center;
     z-index: 1;
-    color: white; /* Adjust text color for better visibility */
+    color: white; 
     animation: fadeIn 2.6s ease forwards;
   }
   
@@ -169,17 +169,17 @@ p {
 .services-section {
     margin-top: 80px;
     margin-bottom: 40px;
-    text-align: center; /* Center the content horizontally within the parent */
+    text-align: center; 
     background-color: var(--blue);
-    overflow: hidden; /* Ensure child elements don't overflow */
+    overflow: hidden; 
 }
 
 .services-list {
     display: flex;
-    justify-content: center; /* Center items horizontally */
+    justify-content: center; 
     flex-wrap: wrap;
     gap: 20px;
-    padding: 20px; /* Adjust padding as needed */
+    padding: 20px; 
     margin-bottom: 80px;
 }
 
@@ -187,7 +187,7 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 190px; /* Set a fixed width for each card */
+    width: 190px; 
     border-radius: 10px;
     border: solid 1px var(--primary);
     background-color: var(--white);
@@ -228,8 +228,13 @@ p {
 .logos {
     box-sizing: border-box;
     overflow: hidden;
-    padding: 60px 0;
+    padding: 40px 0;
     white-space: nowrap;
+    cursor: pointer;
+}
+
+.logos:active {
+    cursor: grabbing; 
 }
 
 .logos-slide {
@@ -239,7 +244,7 @@ p {
 
 .logos-slide img {
     height: 400px;
-    margin: 0px 40px;
+    margin: 0px 15px;
     transition: transform 0.3s ease;
 }
 
@@ -485,5 +490,18 @@ iframe {
 
     .footer-link-container{
         justify-content: center;
+    }
+    .logos-slide img {
+        height: 270px;
+        margin: 0px 10px;
+    }
+    .navbar_items > ul {
+        margin-left: 0px;
+    }
+    .services-card {
+        width: 170px;
+    }
+    p{
+        font-size: 18px;
     }
   }

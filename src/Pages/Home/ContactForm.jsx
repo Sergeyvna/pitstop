@@ -74,7 +74,7 @@ export default function ContactForm() {
                     <form action="https://formsubmit.co/f0a7b6a729bd7f53ff95e224651bec94" method="POST" className="contact-form-container">
                             <input type="text" name="_honey" style={{display: "none"}}/>
                             <input type="hidden" name="_captcha" value="false"/>
-                            <input type="hidden" name="_next" value="https://pitstopautos-dde9ee1fbc8d.herokuapp.com/success"/>
+                            <input type="hidden" name="_next" value="http://localhost:3000/success"/>
 
                             <div className="contact-container">
                                 <label htmlFor='full-name' className='contact-label'>

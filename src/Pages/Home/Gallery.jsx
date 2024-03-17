@@ -1,30 +1,97 @@
+import React, { useRef, useState } from 'react';
+
 export default function Gallery() {
+    const galleryRef = useRef(null);
+    const [isDown, setIsDown] = useState(false);
+    const [startX, setStartX] = useState(null);
+    const [scrollLeft, setScrollLeft] = useState(null);
+    const [imageWidth, setImageWidth] = useState(0);
+
+    // Function to handle mouse down event
+    const handleMouseDown = (e) => {
+        e.preventDefault();
+        setIsDown(true);
+        setStartX(e.pageX - galleryRef.current.offsetLeft);
+        setScrollLeft(galleryRef.current.scrollLeft);
+        galleryRef.current.style.cursor = 'grabbing';
+    };
+
+    // Function to handle mouse leave event
+    const handleMouseLeave = () => {
+        setIsDown(false);
+        galleryRef.current.style.cursor = 'grab';
+    };
+
+    // Function to handle mouse up event
+    const handleMouseUp = () => {
+        setIsDown(false);
+        galleryRef.current.style.cursor = 'grab';
+    };
+
+    // Function to handle mouse move event
+    const handleMouseMove = (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - galleryRef.current.offsetLeft;
+        const walk = (x - startX) * 2; // Adjust scrolling speed here
+        galleryRef.current.scrollLeft = scrollLeft - walk;
+    };
+
+    // Function to handle animation end event
+    const handleAnimationEnd = () => {
+        if (!isDown) {
+            galleryRef.current.style.cursor = 'pointer';
+        }
+    };
+
+    // Function to handle gallery scroll event
+    const handleGalleryScroll = () => {
+        if (galleryRef.current.scrollLeft + galleryRef.current.clientWidth >= galleryRef.current.scrollWidth) {
+            // If scrolled to the end, reset scroll position to create infinite loop effect
+            galleryRef.current.scrollLeft = 0;
+        }
+    };
+
+    // Function to handle image load event
+    const handleImageLoad = () => {
+        // Update imageWidth state when images load to calculate the width of a single image
+        setImageWidth(galleryRef.current.children[0].children[0].offsetWidth);
+    };
+
     return (
         <section className="logos-section" id="gallery">
             <div className="title-container">
-            <h2 className="title">Gallery</h2>
+                <h2 className="title">Gallery</h2>
             </div>
-            <div className='logos'>
+            <div
+                className='logos'
+                ref={galleryRef}
+                onMouseDown={handleMouseDown}
+                onMouseLeave={handleMouseLeave}
+                onMouseUp={handleMouseUp}
+                onMouseMove={handleMouseMove}
+                onAnimationEnd={handleAnimationEnd}
+                onScroll={handleGalleryScroll}
+            >
                 <div className='logos-slide'>
-                    <img src='./img/gallery-img-1.jpg' alt="gallery image 1"/>
-                    <img src='./img/gallery-img-2.jpg' alt="gallery image 2"/>
-                    <img src='./img/gallery-img-3.jpg' alt="gallery image 3"/>
-                    <img src='./img/gallery-img-4.jpg' alt="gallery image 4"/>
-                    <img src='./img/gallery-img-5.jpg' alt="gallery image 5"/>
-                    <img src='./img/gallery-img-6.jpg' alt="gallery image 6"/>
-                    <img src='./img/gallery-img-7.jpg' alt="gallery image 7"/>
-                    <img src='./img/gallery-img-8.jpg' alt="gallery image 8"/>
+                    {/* Duplicate images to create infinite loop effect */}
+                    {[1, 2, 3, 4, 5, 6, 7, 8].map((index) => (
+                        <img
+                            key={index}
+                            src={`./img/gallery-img-${index}.jpg`}
+                            alt={`gallery image ${index}`}
+                            onLoad={handleImageLoad}
+                        />
+                    ))}
                 </div>
-
                 <div className='logos-slide'>
-                    <img src='./img/gallery-img-1.png' alt="gallery image 1"/>
-                    <img src='./img/gallery-img-2.jpg' alt="gallery image 2"/>
-                    <img src='./img/gallery-img-3.jpg' alt="gallery image 3"/>
-                    <img src='./img/gallery-img-4.jpg' alt="gallery image 4"/>
-                    <img src='./img/gallery-img-5.jpg' alt="gallery image 5"/>
-                    <img src='./img/gallery-img-6.jpg' alt="gallery image 6"/>
-                    <img src='./img/gallery-img-7.jpg' alt="gallery image 7"/>
-                    <img src='./img/gallery-img-8.jpg' alt="gallery image 8"/>
+                    {[1, 2, 3, 4, 5, 6, 7, 8].map((index) => (
+                        <img
+                            key={index + 8}
+                            src={`./img/gallery-img-${index}.jpg`}
+                            alt={`gallery image ${index}`}
+                        />
+                    ))}
                 </div>
             </div>
         </section>
