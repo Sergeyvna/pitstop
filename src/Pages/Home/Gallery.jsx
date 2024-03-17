@@ -7,32 +7,32 @@ export default function Gallery() {
     const [scrollLeft, setScrollLeft] = useState(null);
     const [imageWidth, setImageWidth] = useState(0);
 
-    // Function to handle mouse down event
-    const handleMouseDown = (e) => {
+    // Function to handle mouse/touch down event
+    const handlePointerDown = (e) => {
         e.preventDefault();
         setIsDown(true);
-        setStartX(e.pageX - galleryRef.current.offsetLeft);
+        setStartX(e.type === 'mousedown' ? e.pageX - galleryRef.current.offsetLeft : e.touches[0].pageX - galleryRef.current.offsetLeft);
         setScrollLeft(galleryRef.current.scrollLeft);
         galleryRef.current.style.cursor = 'grabbing';
     };
 
-    // Function to handle mouse leave event
-    const handleMouseLeave = () => {
+    // Function to handle mouse/touch leave event
+    const handlePointerLeave = () => {
         setIsDown(false);
         galleryRef.current.style.cursor = 'grab';
     };
 
-    // Function to handle mouse up event
-    const handleMouseUp = () => {
+    // Function to handle mouse/touch up event
+    const handlePointerUp = () => {
         setIsDown(false);
         galleryRef.current.style.cursor = 'grab';
     };
 
-    // Function to handle mouse move event
-    const handleMouseMove = (e) => {
+    // Function to handle mouse/touch move event
+    const handlePointerMove = (e) => {
         if (!isDown) return;
         e.preventDefault();
-        const x = e.pageX - galleryRef.current.offsetLeft;
+        const x = e.type === 'mousemove' ? e.pageX - galleryRef.current.offsetLeft : e.touches[0].pageX - galleryRef.current.offsetLeft;
         const walk = (x - startX) * 2; // Adjust scrolling speed here
         galleryRef.current.scrollLeft = scrollLeft - walk;
     };
@@ -66,10 +66,13 @@ export default function Gallery() {
             <div
                 className='logos'
                 ref={galleryRef}
-                onMouseDown={handleMouseDown}
-                onMouseLeave={handleMouseLeave}
-                onMouseUp={handleMouseUp}
-                onMouseMove={handleMouseMove}
+                onMouseDown={handlePointerDown}
+                onMouseLeave={handlePointerLeave}
+                onMouseUp={handlePointerUp}
+                onMouseMove={handlePointerMove}
+                onTouchStart={handlePointerDown}
+                onTouchMove={handlePointerMove}
+                onTouchEnd={handlePointerUp}
                 onAnimationEnd={handleAnimationEnd}
                 onScroll={handleGalleryScroll}
             >

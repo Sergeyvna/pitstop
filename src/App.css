@@ -239,7 +239,7 @@ p {
 
 .logos-slide {
     display: inline-block;
-    animation: slide 45s infinite linear;
+    animation: slide 40s infinite linear;
 }
 
 .logos-slide img {
@@ -250,10 +250,6 @@ p {
 
 .logos:hover .logos-slide {
     animation-play-state: paused;
-}
-
-.logos-slide img:hover {
-    transform: scale(1.2);
 }
 
 @keyframes slide {
@@ -481,11 +477,11 @@ iframe {
     }
 
     iframe {
-        width: 500px;
+        width: 450px;
     }
 
     .footer-container{
-        padding: 50px 5px;
+        padding: 0px 5px;
     }
 
     .footer-link-container{
@@ -499,7 +495,7 @@ iframe {
         margin-left: 0px;
     }
     .services-card {
-        width: 170px;
+        width: 160px;
     }
     p{
         font-size: 18px;

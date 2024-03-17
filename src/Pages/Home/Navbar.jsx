@@ -71,7 +71,7 @@ function Navbar() {
                             offset={-70}
                             duration={500}
                             onClick={closeMenu}>
-                            About us
+                            About
                         </ScrollLink>
                     </li>
                     
