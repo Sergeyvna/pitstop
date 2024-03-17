@@ -97,7 +97,7 @@ p {
     white-space: nowrap; 
     overflow: hidden; 
     text-overflow: ellipsis; 
-    max-width: 150px;
+    max-width: 100px;
     text-decoration: none;
 }
 
@@ -187,7 +187,7 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 190px; 
+    width: 200px; 
     border-radius: 10px;
     border: solid 1px var(--primary);
     background-color: var(--white);
@@ -275,8 +275,7 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 20px;
-    padding: 30px;
+    margin: 10px;
     border-radius: 25px;
     background-color: #ffffff;
     width: 65%;
@@ -495,7 +494,7 @@ iframe {
         margin-left: 0px;
     }
     .services-card {
-        width: 110px;
+        width: 135px;
     }
     p{
         font-size: 18px;
