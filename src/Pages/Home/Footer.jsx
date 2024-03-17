@@ -10,8 +10,9 @@ export default function Footer() {
           <p>Pit Stop Autos Ltd. <br/>Unit1 Garage, Whitby Rd, <br/>Bristol BS4 4AR <br/><b>MON - FRI: 9AM - 5PM </b><br/>Phone: 07482 014241 <br/>Email: <a href="mailto:pitstopautosbristol@gmail.com" className="footer-links">pitstopautosbristol@gmail.com</a></p>
           <hr/>
           <div className="small-text">
-            <p>Made by <a href="https://www.linkedin.com/in/inga-sedova-361967222/" className="footer-links" target="_blank" rel="noreferrer">Inga</a></p>
             <p><a href="/Terms" className="footer-links">Terms and Conditions</a></p>
+            <p>Made by <a href="https://www.linkedin.com/in/inga-sedova-361967222/" className="footer-links" target="_blank" rel="noreferrer">Inga</a></p>
+            
           </div>
           
         </div>

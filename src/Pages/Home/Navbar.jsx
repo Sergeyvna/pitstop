@@ -38,14 +38,14 @@ function Navbar() {
                     <li>
                         <ScrollLink
                             activeClass="navbar-active"
-                            to="gallery"
+                            to="services"
                             className="navbar-content"
                             spy={true}
                             smooth={true}
                             offset={-70}
                             duration={500}
                             onClick={closeMenu}>
-                            Gallery
+                            Services
                         </ScrollLink>
                     </li>
                     <li>
