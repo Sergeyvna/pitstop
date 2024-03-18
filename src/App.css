@@ -88,7 +88,7 @@ p {
     list-style: none;
     display: flex;
     align-items: flex-start;
-    gap: 40px;
+    gap: 10px;
 }
 
 .navbar-content {
@@ -485,10 +485,6 @@ iframe {
     .logos-slide img {
         height: 270px;
         margin: 0px 10px;
-    }
-    .navbar_items > ul {
-        margin-left: 0px;
-        margin-right: 50px;
     }
     .services-card {
         width: 135px;
