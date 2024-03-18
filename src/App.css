@@ -488,7 +488,7 @@ iframe {
     }
     .navbar_items > ul {
         margin-left: 0px;
-        margin-right: 0px;
+        margin-right: 50px;
     }
     .services-card {
         width: 135px;
