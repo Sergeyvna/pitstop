@@ -84,7 +84,7 @@ p {
 
 .navbar_items > ul {
     margin-left: 20px;
-    margin-right: 20px;
+    margin-right: 30px;
     list-style: none;
     display: flex;
     align-items: flex-start;
@@ -239,17 +239,13 @@ p {
 
 .logos-slide {
     display: inline-block;
-    animation: slide 40s infinite linear;
+    animation: slide 50s infinite linear;
 }
 
 .logos-slide img {
     height: 400px;
     margin: 0px 15px;
     transition: transform 0.3s ease;
-}
-
-.logos:hover .logos-slide {
-    animation-play-state: paused;
 }
 
 @keyframes slide {
