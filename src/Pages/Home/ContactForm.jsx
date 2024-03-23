@@ -7,21 +7,27 @@ export default function ContactForm() {
         setActiveTab(index);
     };
 
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
     const handleSubmit = async (event) => {
         event.preventDefault();
+        setIsSubmitting(true);
 
         const form = event.target;
         const formData = new FormData(form);
 
         try {
+            // Perform form submission asynchronously
             await fetch(form.action, {
                 method: form.method,
                 body: formData,
             });
 
+            // Redirect to the success page
             window.location.href = form.getAttribute('data-success-url');
         } catch (error) {
             console.error('Form submission error:', error);
+            // Handle any errors here
         }
     };
     
@@ -79,7 +85,9 @@ export default function ContactForm() {
                                 </label>
 
                                 <div>
-                                    <button type="submit" className="btn btn-primary contact-form-btn">Submit</button>
+                                    <button type="submit" className={`btn btn-primary contact-form-btn ${isSubmitting ? 'submitting' : ''}`} disabled={isSubmitting}>
+                                        <span>{isSubmitting ? 'Submitting...' : 'Submit'}</span>
+                                    </button>
                                 </div>
                             </div>
                         </form>
@@ -139,7 +147,9 @@ export default function ContactForm() {
                                 </label>
 
                                 <div>
-                                    <button className="btn btn-primary contact-form-btn">Submit</button>
+                                    <button type="submit" className={`btn btn-primary ${isSubmitting ? 'submitting' : ''}`} disabled={isSubmitting}>
+                                        {isSubmitting ? 'Submitting...' : 'Submit'}
+                                    </button>
                                 </div>
                             </div>
                         </form>
