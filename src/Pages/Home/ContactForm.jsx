@@ -147,8 +147,8 @@ export default function ContactForm() {
                                 </label>
 
                                 <div>
-                                    <button type="submit" className={`btn btn-primary ${isSubmitting ? 'submitting' : ''}`} disabled={isSubmitting}>
-                                        {isSubmitting ? 'Submitting...' : 'Submit'}
+                                    <button type="submit" className={`btn btn-primary contact-form-btn ${isSubmitting ? 'submitting' : ''}`} disabled={isSubmitting}>
+                                        <span>{isSubmitting ? 'Submitting...' : 'Submit'}</span>
                                     </button>
                                 </div>
                             </div>
