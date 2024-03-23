@@ -11,7 +11,7 @@ export default function Footer() {
           <hr/>
           <div className="small-text">
             <p><a href="/Terms" className="footer-links">Terms and Conditions</a></p>
-            <p>Made by <a href="https://www.linkedin.com/in/inga-sedova-361967222/" className="footer-links" target="_blank" rel="noreferrer">Inga</a></p>
+            <p>Made by <a href="mailto:insedova@mail.com" className="footer-links" target="_blank" rel="noreferrer">Inga</a></p>
             
           </div>
           
