@@ -6,6 +6,24 @@ export default function ContactForm() {
     const handleTabClick = (index) => {
         setActiveTab(index);
     };
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+
+        const form = event.target;
+        const formData = new FormData(form);
+
+        try {
+            await fetch(form.action, {
+                method: form.method,
+                body: formData,
+            });
+
+            window.location.href = form.getAttribute('data-success-url');
+        } catch (error) {
+            console.error('Form submission error:', error);
+        }
+    };
     
     return (
         <section id='contact'>
@@ -23,12 +41,11 @@ export default function ContactForm() {
 
                 <div className="tab-content-box">
                     <div className="tab-content" style={{ display: activeTab === 0 ? 'block' : 'none' }}>
-                        
-                        <form  action="https://formsubmit.co/f0a7b6a729bd7f53ff95e224651bec94" method="POST" className="contact-form-container">
+                        <form  onSubmit={handleSubmit} action="https://formsubmit.co/f0a7b6a729bd7f53ff95e224651bec94" method="POST" className="contact-form-container" data-success-url="https://pitstopautos.netlify.app/success">
                             
                             <input type="text" name="_honey" style={{display: "none"}}/>
                             <input type="hidden" name="_captcha" value="false"/>
-                            <input type="hidden" name="_next" value="https://pitstopautos.netlify.app/success"/>
+                            {/*<input type="hidden" name="_next" value="https://pitstopautos.netlify.app/success"/>*/}
 
                             <div className="contact-container">
                                 <label htmlFor='Full name' className='contact-label'>
@@ -62,20 +79,20 @@ export default function ContactForm() {
                                 </label>
 
                                 <div>
-                                    <button className="btn btn-primary contact-form-btn">Submit</button>
+                                    <button type="submit" className="btn btn-primary contact-form-btn">Submit</button>
                                 </div>
                             </div>
                         </form>
 
-                        
+                    
                     </div>
 
                     <div className="tab-content" style={{ display: activeTab === 1 ? 'block' : 'none' }}>
-                    <form  action="https://formsubmit.co/f0a7b6a729bd7f53ff95e224651bec94" method="POST" className="contact-form-container">
+                    <form  onSubmit={handleSubmit} action="https://formsubmit.co/f0a7b6a729bd7f53ff95e224651bec94" method="POST" className="contact-form-container" data-success-url="https://pitstopautos.netlify.app/success">
                             
                             <input type="text" name="_honey" style={{display: "none"}}/>
                             <input type="hidden" name="_captcha" value="false"/>
-                            <input type="hidden" name="_next" value="https://pitstopautos.netlify.app/success"/>
+                            {/*<input type="hidden" name="_next" value="https://pitstopautos.netlify.app/success"/>*/}
 
 
                             <div className="contact-container">

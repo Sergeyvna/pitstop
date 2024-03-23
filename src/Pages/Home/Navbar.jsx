@@ -4,14 +4,13 @@ import { Link as ScrollLink } from 'react-scroll';
 function Navbar() {
     const location = useLocation();
 
-    const closeMenu = () => {
-        // Optional: Add logic to handle closing menu if needed
-    }
-
     return (
         <nav className="navbar">
             <div>
-                <img className="navbar-img" src="./img/logo.png" alt="pitstopautoslogo" />
+                <a href="/" className="navbar-logo">
+                    <img className="navbar-img" src="./img/logo.png" alt="pitstopautoslogo" />
+                </a>
+                
             </div>
             <div className="navbar_items">
                 <ul>
@@ -25,12 +24,11 @@ function Navbar() {
                                 smooth={true}
                                 offset={-70}
                                 duration={500}
-                                onClick={closeMenu}
                                 style={{textDecoration: 'none' }}>
                                 Home
                             </ScrollLink>
                         ) : (
-                            <RouterLink to="/" className="navbar-content" onClick={closeMenu}>
+                            <RouterLink to="/" className="navbar-content">
                                 Home
                             </RouterLink>
                         )}
@@ -43,8 +41,7 @@ function Navbar() {
                             spy={true}
                             smooth={true}
                             offset={-70}
-                            duration={500}
-                            onClick={closeMenu}>
+                            duration={500}>
                             Services
                         </ScrollLink>
                     </li>
@@ -56,8 +53,7 @@ function Navbar() {
                             spy={true}
                             smooth={true}
                             offset={-70}
-                            duration={500}
-                            onClick={closeMenu}>
+                            duration={500}>
                             Get a Quote
                         </ScrollLink>
                     </li>
@@ -69,8 +65,7 @@ function Navbar() {
                             spy={true}
                             smooth={true}
                             offset={-70}
-                            duration={500}
-                            onClick={closeMenu}>
+                            duration={500}>
                             About
                         </ScrollLink>
                     </li>

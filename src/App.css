@@ -195,11 +195,6 @@ p {
     
 }
 
-
-.services-card:hover {
-    border-bottom: 5px solid var(--primary);
-}
-
 .services-card-img {
     width: 100px;
     height: 100px;
