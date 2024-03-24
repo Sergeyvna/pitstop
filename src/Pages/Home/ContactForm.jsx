@@ -76,7 +76,7 @@ export default function ContactForm() {
 
                                 <label htmlFor='Message' className='contact-label'>
                                     <span>Message</span>
-                                    <textarea className="contact-input" id="message" name="Message" rows="3" placeholder="Service Request" maxLength={250}/>
+                                    <textarea className="contact-input" id="message" name="Message" rows="3" placeholder="Service Request" maxLength={250} required/>
                                 </label>
 
                                 <label className='checkbox-label'>
@@ -137,7 +137,7 @@ export default function ContactForm() {
 
                                 <label htmlFor='message' className='contact-label'>
                                     <span>Message</span>
-                                    <textarea className="contact-input" id="message" name="Message" rows="3" placeholder="Service Request" maxLength={250}/>
+                                    <textarea className="contact-input" id="message" name="Message" rows="3" placeholder="Service Request" maxLength={250} required/>
                                 </label>
 
 
