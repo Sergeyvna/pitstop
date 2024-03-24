@@ -158,6 +158,51 @@ p {
       opacity: 1;
     }
 }
+
+@media (min-width: 2000px) {
+    .main-content-box {
+      font-size: 2.5rem; /* Adjust font size as needed */
+      top: 45%; /* Adjust positioning */
+    }
+  }
+
+.scroll-arrow {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: pulse 2s infinite;
+  }
+
+.scroll-arrow:hover {
+    cursor: pointer;
+}
+  
+.arrow {
+    border: solid var(--white);
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 7px;
+    transform: rotate(45deg);
+}
+  
+@keyframes pulse {
+    0% {
+      transform: translateX(-50%) scale(1);
+    }
+    50% {
+      transform: translateX(-50%) scale(1.2);
+    }
+    100% {
+      transform: translateX(-50%) scale(1);
+    }
+}
+  
+@media (max-width: 1660px) {
+    .scroll-arrow {
+      display: none;
+    }
+}
+
 /* Services Style */
 .title-container {
     padding: 20px 0;

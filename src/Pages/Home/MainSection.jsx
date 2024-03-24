@@ -5,11 +5,11 @@ export default function MainSection() {
 
   useEffect(() => {
     if (navigateToContact) {
-      const contactSection = document.getElementById('contact');
-      if (contactSection) {
+      const quoteSection = document.getElementById('quote');
+      if (quoteSection) {
         const navbarHeight = document.querySelector('.navbar').offsetHeight;
         window.scrollTo({
-          top: contactSection.offsetTop - navbarHeight,
+          top: quoteSection.offsetTop - navbarHeight - 50,
           behavior: 'smooth'
         });
         setNavigateToContact(false);
@@ -21,7 +21,6 @@ export default function MainSection() {
     // Set navigateToContact state to true when the button is clicked
     setNavigateToContact(true);
   };
-
   return (
     <section id="main-section" className="main-section" style={{ paddingTop: '50px' }}>
       <div className="main-container">
@@ -31,6 +30,9 @@ export default function MainSection() {
           <div className="main-content">
             <h1 className="main-section-title">Welcome to <br />Pit Stop Autos</h1>
             <p className="main-section-desc">We are a family-owned garage located in Bristol, offering affordable prices for our services. <br /> We are dedicated to delivering prompt and professional service without compromising quality.</p>
+          </div>
+          <div className="scroll-arrow" onClick={handleRequestQuote}>
+            <span className="arrow"></span>
           </div>
         </div>
       </div>

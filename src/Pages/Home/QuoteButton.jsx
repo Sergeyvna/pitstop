@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 export default function Quote() {
-    const [navigateToContact, setNavigateToContact] = useState(false);
+  const [navigateToContact, setNavigateToContact] = useState(false);
 
   useEffect(() => {
     if (navigateToContact) {
@@ -21,7 +21,7 @@ export default function Quote() {
     setNavigateToContact(true);
   };
     return (
-        <section>
+        <section id="quote">
             <div className="btn-container">
                 <button className="btn btn-primary" onClick={handleRequestQuote}>Request a Quote</button>
             </div>
