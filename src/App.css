@@ -476,6 +476,9 @@ iframe {
     .main-content-box {
       width: 100%;
     }
+    .main-content{
+        margin-top: 75px;
+    }
     .main-content p {
         font-size: 17px;
     }
