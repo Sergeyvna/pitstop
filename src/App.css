@@ -21,13 +21,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 45px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .btn {
     font-family: "Roboto", sans-serif;
     display: inline-block;
     padding: 25px 60px;
+    width: 450px;
     font-weight: 800;
     font-size: 30px;
     line-height: 24px;
@@ -52,6 +54,7 @@ body {
     .btn {
         font-size: 18px;
         padding: 15px 30px;
+        width: 250px;
     }
   }
 
@@ -138,7 +141,7 @@ p {
   
   .main-content-box {
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -167,7 +170,6 @@ p {
 }
 
 .services-section {
-    margin-top: 80px;
     margin-bottom: 40px;
     text-align: center; 
     background-color: var(--blue);
@@ -468,13 +470,10 @@ iframe {
 
 @media only screen and (max-width: 768px) {
     .btn-container{
-        margin-top: 70px;
-    }
-    .main-section{
-        margin-bottom: 100px;
+        margin-top: 25px;
+        margin-bottom: 25px;
     }
     .main-content-box {
-      margin-top: 50px;
       width: 100%;
     }
     .main-content p {
@@ -491,7 +490,7 @@ iframe {
     }
 
     iframe {
-        width: 450px;
+        width: 380px;
     }
 
     .footer-container{
@@ -509,7 +508,7 @@ iframe {
         margin: 0px 10px;
     }
     .services-card {
-        width: 125px;
+        width: 100px;
     }
     p{
         font-size: 18px;

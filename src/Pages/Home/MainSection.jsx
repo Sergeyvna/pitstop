@@ -32,9 +32,6 @@ export default function MainSection() {
             <h1 className="main-section-title">Welcome to <br />Pit Stop Autos</h1>
             <p className="main-section-desc">We are a family-owned garage located in Bristol, offering affordable prices for our services. <br /> We are dedicated to delivering prompt and professional service without compromising quality.</p>
           </div>
-          <div className="btn-container">
-            <button className="btn btn-primary" onClick={handleRequestQuote}>Request a Quote</button>
-          </div>
         </div>
       </div>
     </section>
