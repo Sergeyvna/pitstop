@@ -519,16 +519,16 @@ iframe {
         margin-bottom: 25px;
     }
     .main-content-box {
-      width: 100%;
+      width: 90%;
     }
     .main-content{
-        margin-top: 75px;
+        margin-top: 10vh;
     }
     .main-content p {
         font-size: 17px;
     }
     .main-content h1 {
-        font-size: 30px;
+        font-size: 29px;
     }
     .title {
         font-size: 35px;
