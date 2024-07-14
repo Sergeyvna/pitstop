@@ -48,7 +48,7 @@ export default function Gallery() {
         e.preventDefault();
         const x =
             e.type === 'mousemove' ? e.pageX - galleryRef.current.offsetLeft : e.touches[0].pageX - galleryRef.current.offsetLeft;
-        const walk = (x - startX) * 2; // Adjust scrolling speed here
+        const walk = (x - startX) * 3; // Adjust scrolling speed here
         galleryRef.current.scrollLeft = scrollLeft - walk;
     };
 
