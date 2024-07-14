@@ -544,9 +544,9 @@ iframe {
         padding: 0px 5px;
     }
     .navbar_items > ul {
-        gap: 20px;
-        font-size: 12px;
-        margin-right: 1.5rem;
+        gap: 17px;
+        font-size: 14px;
+        margin-right: 2.5rem;
     }
 
     .footer-link-container{
