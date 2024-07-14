@@ -44,7 +44,7 @@ export default function ContactForm() {
 
                     <div className="tab-content-box">
                         <div className="tab-content" style={{ display: activeTab === 0 ? 'block' : 'none' }}>
-                            <form onSubmit={handleSubmit} className="contact-form-container" data-success-url="http://localhost:3000/success">
+                            <form onSubmit={handleSubmit} className="contact-form-container" data-success-url="https://pitstop-beta.vercel.app/success">
                                 <input type="text" name="_honey" style={{display: "none"}}/>
                                 <input type="hidden" name="_captcha" value="false"/>
 
@@ -89,7 +89,7 @@ export default function ContactForm() {
                         </div>
 
                     <div className="tab-content" style={{ display: activeTab === 1 ? 'block' : 'none' }}>
-                    <form  onSubmit={handleSubmit} className="contact-form-container" data-success-url="http://localhost:3000/success">
+                    <form  onSubmit={handleSubmit} className="contact-form-container" data-success-url="https://pitstop-beta.vercel.app/success">
                             
                             <input type="text" name="_honey" style={{display: "none"}}/>
                             <input type="hidden" name="_captcha" value="false"/>
