@@ -89,32 +89,30 @@ export default function ContactForm() {
                         </div>
 
                     <div className="tab-content" style={{ display: activeTab === 1 ? 'block' : 'none' }}>
-                    <form  onSubmit={handleSubmit} action="https://formsubmit.co/f0a7b6a729bd7f53ff95e224651bec94" method="POST" className="contact-form-container" data-success-url="http://localhost:3000/success">
+                    <form  onSubmit={handleSubmit} className="contact-form-container" data-success-url="http://localhost:3000/success">
                             
                             <input type="text" name="_honey" style={{display: "none"}}/>
                             <input type="hidden" name="_captcha" value="false"/>
-                            {/*<input type="hidden" name="_next" value="https://pitstopautos.netlify.app/success"/>*/}
-
 
                             <div className="contact-container">
                                 <label htmlFor='full-name' className='contact-label'>
                                     <span>Full Name</span>
-                                    <input type="text" className="contact-input" name="Full&nbsp;name" id="full-name" required />
+                                    <input type="text" className="contact-input" name="full_name" id="full-name" required />
                                 </label>
 
                                 <label htmlFor='email' className='contact-label'>
                                     <span>Email</span>
-                                    <input type="email" className="contact-input" name="Email" id="email" required placeholder="jsmith@gmail.com"/>
+                                    <input type="email" className="contact-input" name="email" id="email" required placeholder="jsmith@gmail.com"/>
                                  </label>
 
                                 <label htmlFor='phone' className='contact-label'>
                                     <span>Phone</span>
-                                    <input type="text" className="contact-input" name="Phone" id="phone" required />
+                                    <input type="text" className="contact-input" name="phone" id="phone" required />
                                 </label>
 
                                 <label htmlFor='Tyre size' className='contact-label'>
                                     <span>Width / Profile / Rim / Speed</span>
-                                    <input type="text" className="contact-input" name="Tyre&nbsp;Size" id="tyre-size" placeholder="195/50R15V" required />
+                                    <input type="text" className="contact-input" name="tyre_size" id="tyre-size" placeholder="195/50R15V" required />
                                 </label>
 
                                 <label htmlFor="select-quantity" className='contact-label'>
@@ -130,7 +128,7 @@ export default function ContactForm() {
 
                                 <label htmlFor='message' className='contact-label'>
                                     <span>Message</span>
-                                    <textarea className="contact-input" id="message" name="Message" rows="3" placeholder="Service Request" maxLength={250} required/>
+                                    <textarea className="contact-input" id="message" name="message" rows="3" placeholder="Service Request" maxLength={250} required/>
                                 </label>
 
 
