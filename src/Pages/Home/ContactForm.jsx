@@ -17,7 +17,7 @@ export default function ContactForm() {
 
         try {
             // Perform form submission using EmailJS
-            await emailjs.sendForm('service_oyxhm3z', 'template_aoadi0m', form, '8DDhqFAXNqaZjlCG-');
+            await emailjs.sendForm('service_megdfpc', 'template_aoadi0m', form, '8DDhqFAXNqaZjlCG-');
 
             // Redirect to the success page
             window.location.href = form.getAttribute('data-success-url');
@@ -44,7 +44,7 @@ export default function ContactForm() {
 
                     <div className="tab-content-box">
                         <div className="tab-content" style={{ display: activeTab === 0 ? 'block' : 'none' }}>
-                            <form onSubmit={handleSubmit} className="contact-form-container" data-success-url="https://pitstop-beta.vercel.app/success">
+                            <form onSubmit={handleSubmit} className="contact-form-container" data-success-url="http://localhost:3000/success">
                                 <input type="text" name="_honey" style={{display: "none"}}/>
                                 <input type="hidden" name="_captcha" value="false"/>
 
@@ -89,7 +89,7 @@ export default function ContactForm() {
                         </div>
 
                     <div className="tab-content" style={{ display: activeTab === 1 ? 'block' : 'none' }}>
-                    <form  onSubmit={handleSubmit} className="contact-form-container" data-success-url="https://pitstop-beta.vercel.app/success">
+                    <form  onSubmit={handleSubmit} className="contact-form-container" data-success-url="http://localhost:3000/success">
                             
                             <input type="text" name="_honey" style={{display: "none"}}/>
                             <input type="hidden" name="_captcha" value="false"/>

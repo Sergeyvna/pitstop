@@ -7,11 +7,10 @@ export default function Footer() {
       <div className="footer-container">
       <div className="footer-link-container">
         <div>
-          <p>Pit Stop Autos Ltd. <br/>Unit1 Garage, Whitby Rd, <br/>Bristol BS4 4AR <br/><b>MON - FRI: 9AM - 5PM </b><br/>Phone: 07482 014241 <br/>Email: <a href="mailto:pitstopautosbristol@gmail.com" className="footer-links">pitstopautosbristol@gmail.com</a></p>
+          <p>Pit Stop Autos Ltd. <br/>Unit1 Garage, Whitby Rd, <br/>Bristol BS4 4AR <br/><b>MON - FRI: 9AM - 5PM </b><br/>Phone: <a href="tel:+4407482014241" className="phone-link">07482 014241</a> <br/>Email: <a href="mailto:pitstopautosbristol@gmail.com" className="footer-links">pitstopautosbristol@gmail.com</a></p>
           <hr/>
           <div className="small-text">
             <p><a href="/Terms" className="footer-links">Terms and Conditions</a></p>
-            <p>Made by <a href="mailto:insedova@mail.com" className="footer-links" target="_blank" rel="noreferrer">Inga</a></p>
             
           </div>
           

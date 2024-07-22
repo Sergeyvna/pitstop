@@ -486,6 +486,16 @@ iframe {
     font-weight: 500;
   }
 
+  .phone-link {
+    color: var(--black);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .phone-link:hover {
+    color: var(--primary);
+  }
+
   .footer-links:hover{
     color: var(--primary);
   }
