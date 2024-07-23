@@ -5,23 +5,24 @@ export default function Gallery() {
     const [isDown, setIsDown] = useState(false);
     const [startX, setStartX] = useState(null);
     const [scrollLeft, setScrollLeft] = useState(null);
-    const [imageWidth, setImageWidth] = useState(0);
-    const [scrollSpeed, setScrollSpeed] = useState(2);
 
     useEffect(() => {
+        const gallery = galleryRef.current;
+        const scrollSpeed = 2; // Increase scroll speed for faster scroll
+
         const handleAutoScroll = () => {
             if (!isDown) {
-                galleryRef.current.scrollLeft += scrollSpeed;
-                if (galleryRef.current.scrollLeft >= galleryRef.current.scrollWidth / 2) {
-                    galleryRef.current.scrollLeft = 0;
+                gallery.scrollLeft += scrollSpeed;
+                if (gallery.scrollLeft >= gallery.scrollWidth / 2) {
+                    gallery.scrollLeft = 0;
                 }
             }
         };
 
-        const interval = setInterval(handleAutoScroll, 50);
+        const interval = setInterval(handleAutoScroll, 20); // Adjust interval for smoothness
 
         return () => clearInterval(interval);
-    }, [isDown, scrollSpeed]);
+    }, [isDown]);
 
     const handlePointerDown = (e) => {
         e.preventDefault();
@@ -52,22 +53,6 @@ export default function Gallery() {
         galleryRef.current.scrollLeft = scrollLeft - walk;
     };
 
-    const handleAnimationEnd = () => {
-        if (!isDown) {
-            galleryRef.current.style.cursor = 'pointer';
-        }
-    };
-
-    const handleGalleryScroll = () => {
-        if (galleryRef.current.scrollLeft + galleryRef.current.clientWidth >= galleryRef.current.scrollWidth) {
-            galleryRef.current.scrollLeft = 0;
-        }
-    };
-
-    const handleImageLoad = () => {
-        setImageWidth(galleryRef.current.children[0].children[0].offsetWidth);
-    };
-
     return (
         <section className="logos-section" id="gallery">
             <div className="title-container">
@@ -83,8 +68,6 @@ export default function Gallery() {
                 onTouchStart={handlePointerDown}
                 onTouchMove={handlePointerMove}
                 onTouchEnd={handlePointerUp}
-                onAnimationEnd={handleAnimationEnd}
-                onScroll={handleGalleryScroll}
             >
                 <div className="logos-slide">
                     {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((index) => (
@@ -92,14 +75,11 @@ export default function Gallery() {
                             key={index}
                             src={`./img/gallery-img-${index}.jpg`}
                             alt={`gallery image ${index}`}
-                            onLoad={handleImageLoad}
                         />
                     ))}
-                </div>
-                <div className="logos-slide">
                     {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((index) => (
                         <img
-                            key={index + 8}
+                            key={index + 11}
                             src={`./img/gallery-img-${index}.jpg`}
                             alt={`gallery image ${index}`}
                         />

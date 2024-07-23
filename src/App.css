@@ -279,14 +279,13 @@ p {
 }
 
 .logos-slide {
-    display: inline-block;
-    animation: slide 50s infinite linear;
+    display: flex;
+    animation: scroll 60s linear infinite;
 }
 
 .logos-slide img {
     height: 400px;
     margin: 0px 15px;
-    transition: transform 0.3s ease;
 }
 
 @keyframes slide {
@@ -294,7 +293,7 @@ p {
         transform: translateX(0);
     }
     to {
-        transform: translateX(-100%);
+        transform: translateX(-80%);
     }
 }
 
