@@ -8,7 +8,7 @@ export default function Gallery() {
 
     useEffect(() => {
         const gallery = galleryRef.current;
-        const scrollSpeed = 2; // Increase scroll speed for faster scroll
+        const scrollSpeed = 2;
 
         const handleAutoScroll = () => {
             if (!isDown) {
@@ -19,7 +19,7 @@ export default function Gallery() {
             }
         };
 
-        const interval = setInterval(handleAutoScroll, 20); // Adjust interval for smoothness
+        const interval = setInterval(handleAutoScroll, 20);
 
         return () => clearInterval(interval);
     }, [isDown]);
@@ -49,7 +49,7 @@ export default function Gallery() {
         e.preventDefault();
         const x =
             e.type === 'mousemove' ? e.pageX - galleryRef.current.offsetLeft : e.touches[0].pageX - galleryRef.current.offsetLeft;
-        const walk = (x - startX) * 3; // Adjust scrolling speed here
+        const walk = (x - startX) * 3;
         galleryRef.current.scrollLeft = scrollLeft - walk;
     };
 
