@@ -61,7 +61,7 @@ export default function ContactForm() {
 
                                     <label htmlFor='phone' className='contact-label'>
                                         <span>Phone</span>
-                                        <input type="text" className="contact-input" name="phone" id="phone" required />
+                                        <input type="tel" className="contact-input" name="phone" id="phone" required placeholder="+44 7XXX XXXXXX" pattern="\d{10,11}"/>
                                     </label>
 
                                     <label htmlFor='car-reg' className='contact-label'>
@@ -107,7 +107,7 @@ export default function ContactForm() {
 
                                 <label htmlFor='phone' className='contact-label'>
                                     <span>Phone</span>
-                                    <input type="text" className="contact-input" name="phone" id="phone" required />
+                                    <input type="tel" className="contact-input" name="phone" id="phone" required placeholder="+44 7XXX XXXXXX"  pattern="\d{10,11}"/>
                                 </label>
 
                                 <label htmlFor='Tyre size' className='contact-label'>
