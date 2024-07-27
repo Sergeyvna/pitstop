@@ -115,6 +115,15 @@ export default function ContactForm() {
                                     <input type="text" className="contact-input" name="tyre_size" id="tyre-size" placeholder="195/50R15V" required />
                                 </label>
 
+                                <label htmlFor="select-type" className='contact-label'>
+                                    <span>Select Tyre Type</span>
+                                    <select id="select-type" name="type"  className="contact-input">
+                                        <option>Budget</option>
+                                        <option>Medium</option>
+                                        <option>Premium</option>
+                                    </select>
+                                </label>
+
                                 <label htmlFor="select-quantity" className='contact-label'>
                                     <span>Select Quantity</span>
                                     <select id="select-quantaty" name="quantity"  className="contact-input">
