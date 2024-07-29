@@ -110,6 +110,11 @@ export default function ContactForm() {
                                     <input type="tel" className="contact-input" name="phone" id="phone" required placeholder="+44 7XXX XXXXXX"  pattern="\d{10,11}"/>
                                 </label>
 
+                                <label htmlFor='car-reg' className='contact-label'>
+                                        <span>Car Registration</span>
+                                        <input type="text" className="contact-input" name="car_reg" id="car-reg" required placeholder="OV21MTU"/>
+                                </label>
+
                                 <label htmlFor='Tyre size' className='contact-label'>
                                     <span>Width / Profile / Rim / Speed</span>
                                     <input type="text" className="contact-input" name="tyre_size" id="tyre-size" placeholder="195/50R15V" required />

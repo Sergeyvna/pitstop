@@ -9,23 +9,23 @@ export default function TermsAndCond() {
             <div className="terms-content">
                 <p>Last updated: 2024-02-24</p>
                 <p><b>Introduction</b></p>
-                <p>By accessing this website we assume you accept these terms and conditions. Do not continue to use pitstopautos.com if you do not agree to take all of the terms and conditions stated on this page.</p>
+                <p>By accessing this website we assume you accept these terms and conditions. Do not continue to use <a href="https://www.pitstopautosltd.co.uk/" className="phone-link">pitstopautosltd.co.uk</a> if you do not agree to take all of the terms and conditions stated on this page.</p>
                 <p>The following terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice and all Agreements: "Client", "You" and "Your" refers to you, the person log on this website and compliant to the Company's terms and conditions. "The Company", "Ourselves", "We", "Our" and "Us", refers to our Company. "Party", "Parties", or "Us", refers to both the Client and ourselves. All terms refer to the offer, acceptance and consideration of payment necessary to undertake the process of our assistance to the Client in the most appropriate manner for the express purpose of meeting the Client's needs in respect of provision of the Company's stated services, in accordance with and subject to, prevailing law of gb. Any use of the above terminology or other words in the singular, plural, capitalization and/or he/she or they, are taken as interchangeable and therefore as referring to same.</p>
                 <p><b>License</b></p>
-                <p>Unless otherwise stated, Pit Stop Autos Limited and/or its licensors own the intellectual property rights for all material on pitstopautos.com. All intellectual property rights are reserved. You may access this from pitstopautos.com for your own personal use subjected to restrictions set in these terms and conditions.</p>
+                <p>Unless otherwise stated, Pit Stop Autos Limited and/or its licensors own the intellectual property rights for all material on <a href="https://www.pitstopautosltd.co.uk/" className="phone-link">pitstopautosltd.co.uk</a>. All intellectual property rights are reserved. You may access this from <a href="https://www.pitstopautosltd.co.uk/" className="phone-link">pitstopautosltd.co.uk</a> for your own personal use subjected to restrictions set in these terms and conditions.</p>
                 <p>You must not:</p>
                 <ul>
                     <li>
-                        <p>Republish material from pitstopautos.com</p>
+                        <p>Republish material from <a href="https://www.pitstopautosltd.co.uk/" className="phone-link">pitstopautosltd.co.uk</a></p>
                     </li>
                     <li>
-                        <p>Sell, rent or sub-license material from pitstopautos.com</p>
+                        <p>Sell, rent or sub-license material from <a href="https://www.pitstopautosltd.co.uk/" className="phone-link">pitstopautosltd.co.uk</a></p>
                     </li>
                     <li>
-                        <p>Reproduce, duplicate or copy material from pitstopautos.com</p>
+                        <p>Reproduce, duplicate or copy material from <a href="https://www.pitstopautosltd.co.uk/" className="phone-link">pitstopautosltd.co.uk</a></p>
                     </li>
                     <li>
-                        <p>Redistribute content from pitstopautos.com</p>
+                        <p>Redistribute content from <a href="https://www.pitstopautosltd.co.uk/" className="phone-link">pitstopautosltd.co.uk</a></p>
                     </li>
                 </ul>
                 <p><b>Privacy Policy</b></p>
