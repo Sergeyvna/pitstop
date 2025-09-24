@@ -37,8 +37,8 @@ export default function ContactForm() {
                 </div>
                 <div className="tab-container">
                     <div className="tab-box">
-                        <button className={`tab-btn ${activeTab === 0 ? 'active' : ''}`} onClick={() => handleTabClick(0)}>General</button>
-                        <button className={`tab-btn ${activeTab === 1 ? 'active' : ''}`} onClick={() => handleTabClick(1)}>Tyres</button>
+                        <button id="general-tab-btn" className={`tab-btn ${activeTab === 0 ? 'active' : ''}`} onClick={() => handleTabClick(0)}>General</button>
+                        <button id="tyres-tab-btn" className={`tab-btn ${activeTab === 1 ? 'active' : ''}`} onClick={() => handleTabClick(1)}>Tyres</button>
                         <div className="line" style={{ left: activeTab === 0 ? '0%' : '50%' }}></div>
                     </div>
 

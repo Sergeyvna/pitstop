@@ -258,6 +258,15 @@ p {
     margin-top: 15px;
 }
 
+.services-card.clickable:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    transform: translateY(-2px) scale(1.02);
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+.services-card.clickable {
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
 /* Gallery Style */
 .logos-section {
     margin: 0;
